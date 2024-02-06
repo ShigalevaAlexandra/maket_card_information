@@ -4,8 +4,8 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">55dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/title_page_color</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
     </style>
     <style name="card_data_left">
@@ -57,5 +57,11 @@
         <item name="android:textColor">@color/card_text_second_color</item>
         <item name="android:background">@drawable/button_save</item>
         <item name="android:textSize">16sp</item>
+    </style>
+    <style name="icon_title">
+        <item name="android:layout_width">19dp</item>
+        <item name="android:layout_height">19dp</item>
+        <item name="android:background">@drawable/title_background</item>
+        <item name="android:elevation">20dp</item>
     </style>
 </resources>

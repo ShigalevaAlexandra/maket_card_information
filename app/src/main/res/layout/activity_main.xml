@@ -11,13 +11,15 @@
     <TextView
         android:id="@+id/title_page"
         style="@style/title_page"
-        android:text="Card Information"
-        android:fontFamily="@font/centurygothic_bold"
-        android:textColor="@color/title_page_color"
         android:background="@drawable/title_background"
         android:elevation="20dp"
+        android:fontFamily="@font/centurygothic_bold"
         android:padding="10dp"
-        tools:ignore="MissingConstraints" />
+        android:text="Card Information"
+        tools:ignore="MissingConstraints">
+
+
+    </TextView>
 
     <!--Оси-компоновщики данных карты-->
     <View
@@ -49,6 +51,7 @@
     <!--Данные карты-->
 
     <!--I часть(left)-->
+
     <TextView
         android:id="@+id/client_name"
         style="@style/card_data_left"
@@ -56,8 +59,8 @@
         android:background="@drawable/rounded_top_left"
         android:text="Leslie Alexander"
         android:textColor="@color/card_text_second_color"
-        android:textStyle="bold"
         android:textSize="12sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/card_info_horizontal"
         app:layout_constraintTop_toTopOf="@+id/card_info_vertical"
         tools:ignore="MissingConstraints" />
@@ -151,6 +154,7 @@
         tools:ignore="MissingConstraints" />
 
     <!--Информация по карте клиента-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/card_info_constrain"
         android:layout_width="match_parent"
@@ -257,5 +261,24 @@
             tools:layout_editor_absoluteY="420dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/button_back"
+        style="@style/icon_title"
+        android:contentDescription="button_back"
+        app:srcCompat="@drawable/button_back"
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="18dp"
+        tools:ignore="MissingConstraints"
+        />
+
+    <ImageView
+        android:id="@+id/button_menu"
+        style="@style/icon_title"
+        android:contentDescription="button_menu"
+        app:srcCompat="@drawable/button_menu"
+        tools:layout_editor_absoluteX="371dp"
+        tools:layout_editor_absoluteY="18dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
