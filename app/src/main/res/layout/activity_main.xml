@@ -93,7 +93,6 @@
         style="@style/card_data_left"
         android:layout_height="51dp"
         android:background="@drawable/rounded_bottom_left"
-        android:fontFamily="@font/corbel"
         android:textColor="@color/card_text_second_color"
         android:paddingTop="0dp"
         android:text="$3,100.30"
@@ -168,17 +167,18 @@
             android:textColor="@color/card_background_color"
             tools:ignore="MissingConstraints" />
 
+        <!--Форма "Данные карты"-->
+        <!--ФИО на карте-->
         <TextView
             android:id="@+id/panel_settings"
             style="@style/panel_form"
-            android:layout_marginStart="65dp"
+            android:layout_marginStart="60dp"
             android:text="Settings"
             android:textColor="@color/passive_panel_color"
             app:layout_constraintStart_toEndOf="@+id/panel_card_info"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp" />
 
-        <!--Форма "Данные карты"-->
-        <!--ФИО на карте-->
         <TextView
             android:id="@+id/form_card_name"
             style="@style/form_line_title"
