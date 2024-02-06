@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+    <!--Шапка страницы-->
+    <TextView
+        android:id="@+id/title_page"
+        style="@style/title_page"
+        android:text="Card Information"
+        android:fontFamily="@font/centurygothic_bold"
+        android:textColor="@color/title_page_color"
+        android:background="@drawable/title_background"
+        android:elevation="20dp"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints" />
+
+    <!--Оси-компоновщики данных карты-->
+    <View
+        android:id="@+id/card_info_horizontal"
+        android:layout_width="379dp"
+        android:layout_height="19dp"
+        android:layout_margin="0.5dp"
+        android:background="@color/card_background_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <View
+        android:id="@+id/card_info_vertical"
+        android:layout_width="21dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/card_background_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <!--Данные карты-->
+
+    <!--I часть(left)-->
+    <TextView
+        android:id="@+id/client_name"
+        style="@style/card_data_left"
+        android:layout_height="37dp"
+        android:background="@drawable/rounded_top_left"
+        android:text="Leslie Alexander"
+        android:textColor="@color/card_text_second_color"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/card_info_horizontal"
+        app:layout_constraintTop_toTopOf="@+id/card_info_vertical"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/client_card_num"
+        style="@style/card_data_left"
+        android:layout_height="42dp"
+        android:background="@color/card_background_color"
+        android:text="2423  3581  9503  2412"
+        android:fontFamily="@font/humanist_lt_bt_light"
+        android:textSize="16sp"
+        android:paddingTop="0dp"
+        app:layout_constraintStart_toStartOf="@+id/card_info_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/client_name"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/client_card_amount_title"
+        style="@style/card_data_left"
+        android:layout_height="35dp"
+        android:background="@color/card_background_color"
+        android:paddingBottom="0dp"
+        android:text="Your Balance"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/card_info_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/card_info_horizontal"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/client_card_amount"
+        style="@style/card_data_left"
+        android:layout_height="51dp"
+        android:background="@drawable/rounded_bottom_left"
+        android:fontFamily="@font/corbel"
+        android:textColor="@color/card_text_second_color"
+        android:paddingTop="0dp"
+        android:text="$3,100.30"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_info_vertical"
+        app:layout_constraintStart_toStartOf="@+id/card_info_horizontal"
+        tools:ignore="MissingConstraints" />
+
+    <!--II часть(right)-->
+    <TextView
+        android:id="@+id/client_card_type"
+        style="@style/card_data_right"
+        android:layout_height="51dp"
+        android:background="@drawable/rounded_bottom_right"
+        android:text="Visa"
+        android:textColor="@color/card_text_second_color"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_info_vertical"
+        app:layout_constraintEnd_toEndOf="@+id/card_info_horizontal"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/client_card_background"
+        style="@style/card_data_right"
+        android:layout_height="35dp"
+        android:background="@color/card_background_color"
+        app:layout_constraintEnd_toEndOf="@+id/card_info_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/card_info_horizontal"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/client_card_year"
+        style="@style/card_data_right"
+        android:layout_height="42dp"
+        android:background="@color/card_background_color"
+        android:text="21 / 24"
+        android:fontFamily="@font/humanist_lt_bt_light"
+        android:textSize="16sp"
+        android:paddingTop="0dp"
+        app:layout_constraintEnd_toEndOf="@+id/card_info_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/client_card_title"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/client_card_title"
+        style="@style/card_data_right"
+        android:layout_height="37dp"
+        android:background="@drawable/rounded_top_right"
+        android:text="A Debit Card"
+        android:textColor="@color/card_text_second_color"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/card_info_horizontal"
+        app:layout_constraintTop_toTopOf="@+id/card_info_vertical"
+        tools:ignore="MissingConstraints" />
+
+    <!--Информация по карте клиента-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/card_info_constrain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="290dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+
+        <!--Панели-->
+        <TextView
+            android:id="@+id/panel_card_info"
+            style="@style/panel_form"
+            android:text="Card Information"
+            android:textColor="@color/card_background_color"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/panel_settings"
+            style="@style/panel_form"
+            android:layout_marginStart="65dp"
+            android:text="Settings"
+            android:textColor="@color/passive_panel_color"
+            app:layout_constraintStart_toEndOf="@+id/panel_card_info"
+            tools:ignore="MissingConstraints" />
+
+        <!--Форма "Данные карты"-->
+        <!--ФИО на карте-->
+        <TextView
+            android:id="@+id/form_card_name"
+            style="@style/form_line_title"
+            android:text="Name on card"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="65dp" />
+
+        <TextView
+            android:id="@+id/form_card_name_line"
+            style="@style/form_line_data"
+            android:text="Leslie Alexander"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="97dp" />
+
+        <!--Номер карты-->
+        <TextView
+            android:id="@+id/form_card_number"
+            style="@style/form_line_title"
+            android:text="Card number"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="165dp" />
+
+        <TextView
+            android:id="@+id/form_card_number_line"
+            style="@style/form_line_data"
+            android:text="2423  3581  9503  2412"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="197dp" />
+
+        <!--Срок службы карты-->
+        <TextView
+            android:id="@+id/form_card_exp_date"
+            style="@style/form_line_title"
+            android:text="Exp Date"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="265dp" />
+
+        <TextView
+            android:id="@+id/form_card_exp_date_line"
+            style="@style/form_line_data"
+            android:layout_width="179dp"
+            android:text="12/24"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="297dp" />
+
+        <!--CVV-->
+
+        <TextView
+            android:id="@+id/form_card_cvv"
+            style="@style/form_line_title"
+            android:layout_marginStart="144dp"
+            android:text="CVV"
+            app:layout_constraintStart_toEndOf="@+id/form_card_exp_date"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="265dp" />
+
+        <TextView
+            android:id="@+id/form_card_cvv_line"
+            style="@style/form_line_data"
+            android:layout_width="179dp"
+            android:layout_marginStart="12dp"
+            android:text="234"
+            app:layout_constraintStart_toEndOf="@+id/form_card_exp_date_line"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="297dp" />
+
+        <!--Кнопка "Сохранить"-->
+        <TextView
+            android:id="@+id/button_save"
+            style="@style/button_save"
+            android:text="Save"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="420dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
